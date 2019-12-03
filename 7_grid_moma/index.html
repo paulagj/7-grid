@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>grid</title>
+    <style type="text/css">
+        @font-face{
+            src: <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        }
+        :root{
+            --ex1:#00AFD7;
+            --ex4:#FFCD00;
+            --ex5:#000000;
+            --ex8:#EEEEEE;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-size: 18px;
+            font-family: 'roboto', sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 250px);
+        }
+        .expos{
+            font-weight: 900;
+        }
+        .expos img{
+            object-fit: cover;
+            object-position: center center;
+            height: 100%;
+        }
+        .ex1{
+            background: var(--ex1);
+        }
+        .ex4{
+            background: var(--ex4);
+        }
+        .ex5{
+            background: var(--ex5);
+            color: white;
+        }
+        .ex8{
+            background: var(--ex8);
+        }
+        .ex1, .ex4, .ex5, .ex8{
+            display: flex;
+            flex-direction: column;
+            grid-column: span 2;
+            padding: 2em 4em;
+        }
+        .ex2, .ex3, .ex6, .ex7{
+            grid-column: span 3;
+        }
+        h1{
+            font-size: 2em;
+            line-height: 1em;
+            flex-grow: 1;
+        }
+        h2{
+            font-size: 1em;
+        }
+    </style>
+</head>    
+<body>
+    <div class="container">
+        <div class="expos ex1">
+            <h1>A new MoMA - our reimagined museum is here</h1>
+            <h2>Learn more MoMA</h2>
+        </div>
+        <div class="expos ex2">
+            <img src="img/img1.jpeg" alt="exposició1">
+        </div>
+        <div class="expos ex3">
+            <img src="img/img2.jpeg" alt="exposició2">
+        </div>
+        <div class="expos ex4">
+            <h1>In the galleries</h1>
+            <h2>Learn more MoMA</h2>
+        </div>
+        <div class="expos ex5">
+            <h1>Theater of Operations: The Gulf Wars 1991-2011</h1>
+            <h2>Through March 1, 2020</h2>
+        </div>
+        <div class="expos ex6">
+            <img src="img/img3.jpeg" alt="exposició3">
+        </div>
+        <div class="expos ex7">
+            <img src="img/img4.jpeg" alt="exposició4">
+        </div>
+        <div class="expos ex8">
+            <h1>Give good design</h1>
+            <h2>Shop 20% off MoMA Design Store</h2>
+        </div>
+    </div>
+</body>       
+</html>
